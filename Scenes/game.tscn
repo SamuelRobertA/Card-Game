@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsvglw1f46hep"]
+
+[ext_resource type="Script" path="res://Scenes/game.gd" id="1_sv65v"]
+[ext_resource type="PackedScene" uid="uid://cxh2qxrwyop4d" path="res://Scenes/board.tscn" id="2_7drkj"]
+[ext_resource type="PackedScene" uid="uid://dg3tdgn10s6d2" path="res://Scenes/card_node_2d.tscn" id="3_kaokk"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_sv65v")
+
+[node name="Board" parent="." instance=ExtResource("2_7drkj")]
+
+[node name="CardNode2D" parent="." instance=ExtResource("3_kaokk")]
+position = Vector2(432, 560)
+
+[node name="CardNode2D2" parent="." instance=ExtResource("3_kaokk")]
+position = Vector2(576, 560)
+
+[node name="CardNode2D3" parent="." instance=ExtResource("3_kaokk")]
+position = Vector2(720, 560)

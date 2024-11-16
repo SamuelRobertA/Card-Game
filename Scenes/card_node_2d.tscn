@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg3tdgn10s6d2"]
+
+[ext_resource type="Texture2D" uid="uid://bue82k5xhm7dy" path="res://Assets/card-back4.png" id="1_f3f1n"]
+[ext_resource type="Script" path="res://Scripts/CardDatabase.gd" id="1_jwu6h"]
+[ext_resource type="Script" path="res://Scripts/CardSprite.gd" id="3_g23gx"]
+
+[node name="CardNode2D" type="Node2D"]
+script = ExtResource("1_jwu6h")
+
+[node name="Card" type="Sprite2D" parent="."]
+texture = ExtResource("1_f3f1n")
+script = ExtResource("3_g23gx")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Card"]
+offset_left = -46.0
+offset_top = -71.0
+offset_right = 47.0
+offset_bottom = 70.0
+
+[connection signal="generated" from="." to="Card" method="_on_card_node_2d_generated"]
