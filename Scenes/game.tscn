@@ -9,11 +9,34 @@ script = ExtResource("1_sv65v")
 
 [node name="Board" parent="." instance=ExtResource("2_7drkj")]
 
-[node name="CardNode2D" parent="." instance=ExtResource("3_kaokk")]
+[node name="Player" type="Node2D" parent="Board"]
+
+[node name="CardNode2D" parent="Board/Player" instance=ExtResource("3_kaokk")]
 position = Vector2(432, 560)
 
-[node name="CardNode2D2" parent="." instance=ExtResource("3_kaokk")]
+[node name="CardNode2D2" parent="Board/Player" instance=ExtResource("3_kaokk")]
 position = Vector2(576, 560)
 
-[node name="CardNode2D3" parent="." instance=ExtResource("3_kaokk")]
+[node name="CardNode2D3" parent="Board/Player" instance=ExtResource("3_kaokk")]
 position = Vector2(720, 560)
+
+[node name="Opponent" type="Node2D" parent="Board"]
+
+[node name="CardNode2D4" parent="Board/Opponent" instance=ExtResource("3_kaokk")]
+position = Vector2(432, 88)
+
+[node name="CardNode2D5" parent="Board/Opponent" instance=ExtResource("3_kaokk")]
+position = Vector2(576, 88)
+
+[node name="CardNode2D6" parent="Board/Opponent" instance=ExtResource("3_kaokk")]
+position = Vector2(720, 88)
+
+[node name="Discard Pile" type="Node2D" parent="Board"]
+
+[node name="CardNode2D7" parent="Board/Discard Pile" instance=ExtResource("3_kaokk")]
+position = Vector2(144, 336)
+
+[node name="Deck" type="Node2D" parent="Board"]
+
+[node name="CardNode2D8" parent="Board/Deck" instance=ExtResource("3_kaokk")]
+position = Vector2(1040, 334)
